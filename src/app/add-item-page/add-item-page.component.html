@@ -1,0 +1,33 @@
+<p>add-item-page works!</p>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+
+  <label for="name">Name</label>
+  <input type="text" id="name " name="name" formControlName="name"><br />
+
+  <label for="category">Category</label>
+  <input type="text" id="category " name="category" formControlName="category"><br />
+
+  <label for="description">Description</label>
+  <input type="text" id="description " name="description" formControlName="description"><br />
+
+  <label for="estimatedValue">Estimated Value</label>
+  <input type="text" id="estimatedValue " name="estimatedValue" formControlName="estimatedValue"><br />
+
+  <label for="imageDirectory">Image Directory</label>
+  <input type="text" id="imageDirectory " name="imageDirectory" formControlName="imageDirectory"><br />
+
+  <div class="custom-file-container" data-upload-id="my-unique-id"></div>
+
+  <button type="submit">Add Item</button>
+</form>
+
+<div *ngIf="returnedItem">
+  <div>{{returnedItem.name}} - {{returnedItem.description}} - {{returnedItem.estimatedValue}}</div>
+</div>
+
+
+
+
+
+
